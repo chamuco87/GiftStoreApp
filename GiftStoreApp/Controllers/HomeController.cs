@@ -13,21 +13,8 @@ namespace GiftStoreApp.Controllers
         public IActionResult Index()
         {
             GiftStoreAppContext dbContext = new GiftStoreAppContext();
-            return View(dbContext.GlobalSettings.FirstOrDefault());
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            var setting = dbContext.GlobalSettings.FirstOrDefault();
+            return View("Register");
         }
 
         public IActionResult Error()

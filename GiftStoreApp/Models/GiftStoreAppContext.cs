@@ -7,6 +7,7 @@ namespace GiftStoreApp.Models
     public partial class GiftStoreAppContext : DbContext
     {
         public virtual DbSet<GlobalSettings> GlobalSettings { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,6 +31,21 @@ namespace GiftStoreApp.Models
                 entity.Property(e => e.Value)
                     .IsRequired()
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Users>(entity =>
+            {
+                entity.HasKey(e => e.UserId);
+
+                entity.Property(e => e.DateCreated).HasColumnType("datetime");
+
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LastLogin).HasColumnType("datetime");
+
+                entity.Property(e => e.Password).IsUnicode(false);
             });
         }
     }

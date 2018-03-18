@@ -196,4 +196,7 @@
     <Content Remove="wwwroot\AdminLTE\wwwroot\lib\bootstrap-colorpicker\src\less\colorpicker.less" />
     <Content Remove="wwwroot\AdminLTE\wwwroot\lib\bootstrap-colorpicker\src\sass\_colorpicker.scss" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
 </Project>
