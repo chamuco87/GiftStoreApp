@@ -1,4 +1,7 @@
-﻿@model GiftStoreApp.Models.GlobalSettings
+﻿@{
+    Layout = "~/Views/Shared/_LayoutRegister.cshtml";
+}
+@model GiftStoreApp.Models.GlobalSettings
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -56,19 +59,3 @@
   <!-- /.form-box -->
 </div>
 <!-- /.register-box -->
-
-<!-- jQuery 3 -->
-<script src="~/lib//jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="~/lib//bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="~/lib/plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
