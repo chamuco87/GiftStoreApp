@@ -12,7 +12,7 @@ namespace GiftStoreApp.Controllers
     {
         public IActionResult Index()
         {
-            DB_A109B3_chamucolol87Context dbContext = new DB_A109B3_chamucolol87Context();
+            GiftStoreAppContext dbContext = new GiftStoreAppContext();
             return View(dbContext.GlobalSettings.FirstOrDefault());
         }
 
